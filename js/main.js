@@ -34,7 +34,7 @@ $(document).ready(function(){
             }
         },
         submitHandler: function(form) {
-            console.log(form)
+            enviarFormulario(form);
         },
         invalidHandler: function(evento, validador) {
             let camposIncorretos = validador.numberOfInvalids();
@@ -44,4 +44,17 @@ $(document).ready(function(){
             }
         }
     })
+
+    function enviarFormulario(form) { //adicionado enviarFormulario
+        var mensagemSucesso = document.createElement('div');
+        mensagemSucesso.textContent = 'Formulário enviado com sucesso!';
+        mensagemSucesso.className = 'mensagem-sucesso';
+        document.body.appendChild(mensagemSucesso);
+
+        form.reset();
+
+        setTimeout(function() {
+            mensagemSucesso.parentNode.removeChild(mensagemSucesso);
+        }, 3000); 
+    }
 })

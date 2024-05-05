@@ -59,3 +59,39 @@ form >.container {
 form button {
     max-width: 120px;
 }
+
+.form-campo input {
+    width: 300px; /* Definindo uma largura fixa para os campos de entrada */
+    padding: 12px;
+    box-sizing: border-box; /* Garante que o padding nÃ£o afete a largura total */
+}
+
+form > .container {
+    max-width: 360px;
+    margin: 0 auto; /* Centraliza o formulÃ¡rio dentro do contÃªiner */
+}
+
+form button {
+    max-width: 120px;
+    margin: 0 auto; /* Centraliza o botÃ£o de envio dentro do contÃªiner */
+}
+
+section#contato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.mensagem-sucesso {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+}
